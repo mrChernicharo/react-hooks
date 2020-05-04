@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-export default function Name() {
+export default React.memo(() => {
+  console.log('render')
   const [name, setName] = useState('');
   return (
     <div className="header-name">
@@ -14,4 +15,4 @@ export default function Name() {
     </div>
 
   );
-}
+})
